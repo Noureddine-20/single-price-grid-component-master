@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: "karla";
+    min-height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 0px #aaa;;
+}
+main section {
+    padding: 35px;
+}
+main .top {
+    grid-column: 1 / 3;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px 10px 0 0;
+}
+main .top h1 {
+    color: hsl(179, 62%, 43%);
+}
+main .top h2 {
+    color: hsl(71, 73%, 54%);
+}
+main .top p {
+    color: hsl(218, 22%, 67%);
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+main .left {
+    background-color: hsl(179, 62%, 40%);
+    border-radius: 0 0 0 10px;
+    grid-column: 1 / 2;
+}
+main .left h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5em;
+}
+main .left h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 2em;
+    position: relative;
+}
+main .left h2 span {
+    font-size: 0.6em;
+    color: hsl(0, 0%, 90%);;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+}
+main .left p:first-of-type {
+    color:hsl(0, 0%, 90%);
+}
+main .left p:last-of-type {
+    background-color: hsl(71, 73%, 54%);
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+}
+main .right {
+    background-color:hsl(179, 62%, 43%);
+    border-radius: 0 0 10px 0;
+}
+main .right h1 {
+    color: hsl(0, 0%, 100%);
+}
+main .right ul {
+    list-style-type: none;
+    padding: 0;
+}
+main .right ul li {
+    color: hsl(0, 0%, 90%);
+    margin-top: 5px;
+}
+@media (max-width: 766px) {
+    main {
+        width: 300px;
+        margin: 20px;
+    }
+    main section {
+        padding: 20px;
+    }
+    main .top  {
+        grid-column: unset;
+    }
+    main .top h1 {
+        font-size: 1.2em;
+    }
+    main .top h2 {
+        font-size: 1.1em;
+    }
+    main .top p {
+        font-size: 0.8em;
+    }
+    main .left {
+        border-radius: 0;
+    }
+    main .left h1 {
+        font-size: 1.2em;
+    }
+    main .left h2 {
+        font-size: 1.6em;
+    }
+    main .left p {
+        font-size: 0.9em;
+    }
+    main .left p:last-of-type {
+        margin: initial;
+    }
+    main .right {
+        border-radius: 0 0 10px 10px;
+    }
+    main .right h1 {
+        font-size: 1.2em;
+    }
+    main .right ul li {
+        font-size: 0.9em;
+    }
+}
